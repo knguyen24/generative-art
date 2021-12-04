@@ -9,13 +9,9 @@ function setup() {
   //Fills every pixel on the canvas with a greyscale color.
   for(let pointY = 0; pointY < pixelsY; pointY++){
     for(let pointX=0; pointX < pixelsX; pointX++){
-      let colorValue = random(0,255)
       //This part is supposed to turn a certain range of colors into white
-      if (80 < colorValue && colorValue < 150){
         fill(random(0,255),random(0,255),random(0,255))
-      } else{
-        fill(random(0,255),random(0,255),random(0,255))
-      }
       rect(pointX,pointY,100,100)
-  }}
+    }
+  }
 }
