@@ -1,21 +1,21 @@
-function setup() {  
+function setup() {
   //If you do it as a 'draw' function, it actually looks like static, but it's pretty laggy
   let pixelsX = 400
   let pixelsY = 400
   createCanvas(pixelsX, pixelsY);
   background(255,255,255)
   noStroke()
-  
+
   //Fills every pixel on the canvas with a greyscale color.
   for(let pointY = 0; pointY < pixelsY; pointY++){
     for(let pointX=0; pointX < pixelsX; pointX++){
       let colorValue = random(0,255)
       //This part is supposed to turn a certain range of colors into white
       if (80 < colorValue && colorValue < 150){
-        fill(255,255,255)
+        fill(random(0,255),random(0,255),random(0,255))
       } else{
-        fill(colorValue)       
+        fill(random(0,255),random(0,255),random(0,255))
       }
-      rect(pointX,pointY,1,1)
+      rect(pointX,pointY,100,100)
   }}
 }
