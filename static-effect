@@ -1,28 +1,26 @@
-function setup() {
+function setup() {  
   //If you do it as a 'draw' function, it actually looks like static, but it's pretty laggy
   let pixelsX = 400
   let pixelsY = 400
   createCanvas(pixelsX, pixelsY);
   background(255,255,255)
+  r = random(0,255)
+  g = random(0,255)
+  b = random(0,255)
   noStroke()
 
-  randomnessList = []
-  //Creates initial line of random pixels that will repeat
-  for(let pointX=-500; pointX < pixelsX; pointX++){
-      //This part is supposed to turn a certain range of colors into white
-        randomness = random(0,255)
-        fill(randomness,randomness,randomness)
-        randomnessList.push(randomness)
-      rect(pointX,0,100,100)
-    }
-  
-  print(randomnessList)
-  
-  for(let pointY = 1;pointY < pixelsY; pointY++){
+  //Fills every pixel on the canvas with a greyscale color.
+  for(let pointY = 0; pointY < pixelsY; pointY++){
     for(let pointX=0; pointX < pixelsX; pointX++){
+      let colorValue = random(0,255)
       //This part is supposed to turn a certain range of colors into white
-        fill(randomnessList[pointX],randomnessList[pointX],randomnessList[pointX])
-      rect(pointX+randomnessList[pointY],pointY,100,100)
-    }
-  }
+      if (80 < colorValue && colorValue < 150){
+        fill(r,g,b)
+      } else{
+        fill(colorValue)       
+      }
+      rect(pointX,pointY,1,1)
+  }}
 }
+
+//This changes code randomly changes the color of the pixels.//
