@@ -20,7 +20,6 @@ function setup() {
   
   for(let pointY = 1;pointY < pixelsY; pointY++){
     for(let pointX=0; pointX < pixelsX; pointX++){
-      //This part is supposed to turn a certain range of colors into white
         fill(randomnessList[pointX],randomnessList[pointX],randomnessList[pointX])
       rect(pointX+randomnessList[pointY],pointY,100,100)
     }
