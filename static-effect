@@ -20,7 +20,8 @@ function setup() {
         fill(colorValue)       
       }
       rect(pointX,pointY,1,1)
-  }}
+  }
+ }
 }
 
 //This changes code randomly changes the color of the pixels.//
